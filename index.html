@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ========== SEO & OPEN GRAPH ========== -->
+    <title>Ezzah Chaudary · Software Engineer Portfolio</title>
+    <meta name="description" content="Ezzah Chaudary – BS Software Engineering student with hands-on experience in web development, blockchain, and system design. View my portfolio and projects." />
+    <meta name="keywords" content="Ezzah Chaudary, Software Engineer, Portfolio, Web Development, Blockchain, React, Node.js" />
+    <link rel="canonical" href="https://ezzahchaudary.github.io" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Ezzah Chaudary · Software Engineer Portfolio" />
+    <meta property="og:description" content="BS Software Engineering student with hands-on experience in web development, blockchain, and system design." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ezzahchaudary.github.io" />
+    <meta property="og:image" content="https://ezzahchaudary.github.io/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ezzah Chaudary · Software Engineer Portfolio" />
+    <meta name="twitter:description" content="BS Software Engineering student with hands-on experience in web development, blockchain, and system design." />
+
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+    <!-- ========== FONT LOADING (Performance) ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+    <!-- Theme script -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ========== SKIP TO CONTENT ========== -->
+    <a class="skip-link" href="#about">Skip to main content</a>
+
+    <!-- ========== SCROLL PROGRESS ========== -->
+    <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="container nav">
+            <div class="nav-top">
+                <div class="logo"><span class="logo-mark">EC</span>Ezzah Chaudary<span class="dot">.</span></div>
+                <div class="nav-right">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+                        <i class="fas fa-sun icon-sun"></i>
+                        <i class="fas fa-moon icon-moon"></i>
+                    </button>
+                    <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks" role="navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="avatar bracket-frame">
+                <span class="bk-tr"></span><span class="bk-bl"></span>
+                <img src="profile.jpeg" alt="Ezzah Chaudary - Profile Photo" />
+            </div>
+            <h1>Ezzah <span>Chaudary</span><span class="dot">.</span></h1>
+            <div class="role-line">
+                <span id="roleTyped"></span><span class="cursor-blink">|</span>
+            </div>
+            <p class="subhead">
+                BS Software Engineering · CGPA 3.57 · Scholarship Holder<br />
+                Passionate about web development, blockchain, and system design.
+            </p>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                <a href="CV.pdf" download class="btn btn-cv">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+            <div class="chain-strip" aria-hidden="true">
+                <div class="chain-pulse"></div>
+                <div class="chain-node">React</div>
+                <div class="chain-node">Node.js</div>
+                <div class="chain-node">Solidity</div>
+                <div class="chain-node">MySQL</div>
+                <div class="chain-node">Figma</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        <strong>Career Objective:</strong> BS Software Engineering student with a strong academic record (CGPA: 3.57) and hands-on experience in web development, blockchain, and system design. Passionate about building efficient, user-centric solutions and eager to contribute to real-world projects as a software developer or quality assurance professional.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/EzzahChaudary" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ezzah-chaudary-488122381/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://mail.google.com/mail/?view=cm&to=chaudharyezzah8@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="https://profile.indeed.com/?hl=en_PK&co=PK&from=gnav-homepage" target="_blank" aria-label="Indeed"><i class="fas fa-id-card"></i></a>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card"><div class="number" data-count="3.57" data-decimals="2">0</div><div class="label">CGPA</div></div>
+                    <div class="stat-card"><div class="number" data-count="6" data-suffix="+">0</div><div class="label">Projects</div></div>
+                    <div class="stat-card"><div class="number" data-count="2026">0</div><div class="label">Graduation</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div class="skill-category">
+                <h3>Programming &amp; Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1"><i class="fab fa-java"></i> Java</div>
+                    <div class="skill-item" style="--i:2"><i class="fas fa-code"></i> C++</div>
+                    <div class="skill-item" style="--i:3"><i class="fab fa-php"></i> PHP</div>
+                    <div class="skill-item" style="--i:4"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="skill-item" style="--i:5"><i class="fas fa-database"></i> SQL</div>
+                    <div class="skill-item" style="--i:6"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="skill-item" style="--i:7"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="skill-item" style="--i:8"><i class="fas fa-link"></i> Solidity</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks &amp; Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1"><i class="fab fa-react"></i> React.js</div>
+                    <div class="skill-item" style="--i:2"><i class="fab fa-node"></i> Node.js</div>
+                    <div class="skill-item" style="--i:3"><i class="fas fa-server"></i> Express.js</div>
+                    <div class="skill-item" style="--i:4"><i class="fas fa-code"></i> JSP</div>
+                    <div class="skill-item" style="--i:5"><i class="fas fa-database"></i> MySQL</div>
+                    <div class="skill-item" style="--i:6"><i class="fas fa-pencil-ruler"></i> Figma</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Other</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1"><i class="fas fa-bug"></i> Debugging</div>
+                    <div class="skill-item" style="--i:2"><i class="fas fa-tasks"></i> Project Planning</div>
+                    <div class="skill-item" style="--i:3"><i class="fas fa-clock"></i> Deadline Management</div>
+                    <div class="skill-item" style="--i:4"><i class="fas fa-comments"></i> Communication</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project cards – loading="lazy" added to images below the fold -->
+                <div class="project-card" data-project-id="rwa">
+                    <div class="project-img">
+                        <img src="logo.jpeg" alt="RWA Dashboard" loading="lazy" />
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Tokenization of RWA (Rental Property)</h3>
+                        <p>Blockchain platform enabling fractional ownership of rental properties using smart contracts, KYC, and a React/Node.js frontend.</p>
+                        <div class="tech-tags">
+                            <span>Solidity</span><span>React</span><span>Node.js</span><span>Web3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="food">
+                    <div class="project-img">
+                        <img src="Welcome.png" alt="Food app" loading="lazy" />
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Food Delivery App UI</h3>
+                        <p>Figma design focusing on user flow, restaurant browsing, cart management, and an intuitive ordering experience.</p>
+                        <div class="tech-tags">
+                            <span>Figma</span><span>UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="banking">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content">
+                            <i class="fas fa-university"></i>
+                            <span>Online Banking System</span>
+                        </div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Online Banking System</h3>
+                        <p>OOP-based CLI application simulating accounts, transactions, and users with modular class design and in-memory data handling.</p>
+                        <div class="tech-tags">
+                            <span>Java</span><span>OOP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="hotel">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content">
+                            <i class="fas fa-hotel"></i>
+                            <span>Hotel Management System</span>
+                        </div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Hotel Management System</h3>
+                        <p>DSA-based CLI app for room allocation, billing, and customer check-in/out using efficient data structures.</p>
+                        <div class="tech-tags">
+                            <span>C++</span><span>Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="coffee">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content">
+                            <i class="fas fa-mug-hot"></i>
+                            <span>My Coffee Shop Website</span>
+                        </div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>My Coffee Shop Website</h3>
+                        <p>JSP-based web app with database integration for product catalogue, orders, and user login, styled for a cafe brand.</p>
+                        <div class="tech-tags">
+                            <span>JSP</span><span>MySQL</span><span>HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="watch">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content">
+                            <i class="fas fa-clock"></i>
+                            <span>WatchIt Website</span>
+                        </div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>WatchIt Website</h3>
+                        <p>Full-stack PHP website using HTML, CSS, JavaScript, and MySQL for selling and buying watches.</p>
+                        <div class="tech-tags">
+                            <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Real World Experience</h2>
+            </div>
+            <div class="experience-wrapper">
+                <div class="experience-text">
+                    <h3 class="exp-title">Mulligans – Corporate Website</h3>
+                    <div class="exp-block">
+                        <h4>Overview</h4>
+                        <p>Built a modern, fully responsive corporate website for a high‑end consultancy serving government, defense, and corporate clients across Pakistan.</p>
+                    </div>
+                    <div class="exp-block">
+                        <h4>Key Features</h4>
+                        <ul class="exp-features">
+                            <li><i class="fas fa-check-circle"></i> Filterable project portfolio with smooth animations</li>
+                            <li><i class="fas fa-check-circle"></i> 8+ service cards with detailed descriptions</li>
+                            <li><i class="fas fa-check-circle"></i> Trust section highlighting certifications (PECC‑1, FBR, SECP)</li>
+                            <li><i class="fas fa-check-circle"></i> Functional contact form with direct email/address</li>
+                            <li><i class="fas fa-check-circle"></i> Live statistics counter (200+ projects, 400+ elevators)</li>
+                        </ul>
+                    </div>
+                    <div class="exp-block">
+                        <h4>Tech Stack</h4>
+                        <div class="exp-tags">
+                            <span><i class="fab fa-react"></i> React</span>
+                            <span><i class="fab fa-js"></i> TypeScript</span>
+                            <span><i class="fas fa-bolt"></i> Vite</span>
+                            <span><i class="fas fa-film"></i> Framer Motion</span>
+                            <span><i class="fab fa-css3-alt"></i> Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="exp-block">
+                        <h4>Key Learnings</h4>
+                        <ul class="exp-features">
+                            <li><i class="fas fa-star"></i> Complex filtering logic with AnimatePresence transitions</li>
+                            <li><i class="fas fa-star"></i> Unified color system using CSS variables</li>
+                            <li><i class="fas fa-star"></i> Reusable component architecture</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-images">
+                    <div class="exp-image-stack">
+                        <div class="exp-img-item">
+                            <img src="Homepage.png" alt="Mulligans - Homepage" loading="lazy" />
+                            <span class="exp-img-label">Homepage</span>
+                        </div>
+                        <div class="exp-img-item">
+                            <img src="About.png" alt="Mulligans - About" loading="lazy" />
+                            <span class="exp-img-label">About</span>
+                        </div>
+                        <div class="exp-img-item">
+                            <img src="portfolio.png" alt="Mulligans - Portfolio" loading="lazy" />
+                            <span class="exp-img-label">Portfolio</span>
+                        </div>
+                        <div class="exp-img-item">
+                            <img src="Services.png" alt="Mulligans - Services" loading="lazy" />
+                            <span class="exp-img-label">Services</span>
+                        </div>
+                        <div class="exp-img-item">
+                            <img src="Contact.png" alt="Mulligans - Contact" loading="lazy" />
+                            <span class="exp-img-label">Contact</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="edu-timeline">
+                <div class="edu-item">
+                    <div>
+                        <div class="institution">BS Software Engineering (Scholarship Holder)</div>
+                        <div class="detail">Foundation University School of Science and Technology (FUSST) · Rawalpindi</div>
+                    </div>
+                    <div class="year">2022 – 2026 · CGPA 3.57</div>
+                </div>
+                <div class="edu-item">
+                    <div>
+                        <div class="institution">FSc Pre-Engineering</div>
+                        <div class="detail">Fazaia Intermediate College (Nur Khan Base) · Rawalpindi</div>
+                    </div>
+                    <div class="year">2020 – 2022</div>
+                </div>
+                <div class="edu-item">
+                    <div>
+                        <div class="institution">Matriculation (Science)</div>
+                        <div class="detail">OPF Girls College · Rawalpindi</div>
+                    </div>
+                    <div class="year">2018 – 2020</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LANGUAGES & HOBBIES ========== -->
+    <section id="more" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Languages &amp; Interests</h2>
+            </div>
+            <div class="two-col">
+                <div class="lang-hobby-list">
+                    <h3><i class="fas fa-language" style="color:var(--mint); margin-right:0.5rem;"></i>Languages</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Urdu (Native)</li>
+                        <li><i class="fas fa-check-circle"></i>English (Fluent)</li>
+                    </ul>
+                </div>
+                <div class="lang-hobby-list">
+                    <h3><i class="fas fa-heart" style="color:var(--mint); margin-right:0.5rem;"></i>Hobbies</h3>
+                    <ul>
+                        <li><i class="fas fa-book"></i>Reading</li>
+                        <li><i class="fas fa-pen"></i>Writing</li>
+                        <li><i class="fas fa-utensils"></i>Cooking</li>
+                        <li><i class="fas fa-tshirt"></i>Knitting</li>
+                        <li><i class="fas fa-undo-alt"></i>Crocheting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <p style="max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-muted);">
+                Have a question, a project idea, or just want to say hello? I'd love to hear from you!
+            </p>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdaqenyy" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="xyz@example.com" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="_subject">Subject</label>
+                    <input type="text" id="_subject" name="_subject" required placeholder="Project Inquiry" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Leave a Message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <span id="submitText">Send Message</span>
+                    <span class="btn-spinner" id="submitSpinner" style="display:none;"></span>
+                </button>
+                <div id="formFeedback" style="margin-top: 1rem; display: none; text-align: center; font-weight: 500;"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== REFERENCES ========== -->
+    <section id="references" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">References</h2>
+            </div>
+            <div class="ref-grid">
+                <div class="ref-card">
+                    <div class="name">Muhammad Usman Khan Lodhi</div>
+                    <div class="title">Lecturer, FUSST</div>
+                    <div class="email"><i class="fas fa-envelope"></i> muhdusmankhan@fui.edu.pk</div>
+                </div>
+                <div class="ref-card">
+                    <div class="name">Sherjeel Farooqui</div>
+                    <div class="title">Assistant Professor, FUSST</div>
+                    <div class="email"><i class="fas fa-envelope"></i> sherjeel.farooqui@fui.edu.pk</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MODAL ========== -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h3 id="modalTitle">Project Title</h3>
+            <div class="modal-gallery" id="modalGallery"></div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://github.com/EzzahChaudary" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ezzah-chaudary-488122381/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=chaudharyezzah8@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://profile.indeed.com/?hl=en_PK&co=PK&from=gnav-homepage" target="_blank" aria-label="Indeed"><i class="fas fa-id-card"></i></a>
+            </div>
+            <p>
+                <i class="fas fa-phone"></i> +92 311 5751131 &nbsp;·&nbsp;
+                <i class="fas fa-map-pin"></i> Roselane 7A, New Lalazaa, Rawalpindi
+                <button class="copy-email-btn" id="copyEmailBtn" title="Copy email" aria-label="Copy email address"><i class="fas fa-copy"></i></button>
+            </p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">
+                &copy; <span id="copyrightYear">2026</span> Ezzah Chaudary · All rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
