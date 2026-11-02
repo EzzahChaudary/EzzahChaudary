@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ========== SEO & OPEN GRAPH ========== -->
+    <title>Ezzah Chaudary · Software Engineer Portfolio</title>
+    <meta name="description" content="Ezzah Chaudary – Full-Stack Developer and QA Engineer experienced in Next.js, TypeScript, Cloudflare, React, Node.js, PHP, and software testing. View my work, projects, and experience." />
+    <meta name="keywords" content="Ezzah Chaudary, Software Engineer, Portfolio, Web Development, Blockchain, React, Node.js, QA Engineer, Software Testing" />
+    <link rel="canonical" href="https://ezzahchaudary.github.io" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Ezzah Chaudary · Software Engineer Portfolio" />
+    <meta property="og:description" content="Full-Stack Developer and QA Engineer working across web applications, backend systems, databases, and software quality." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ezzahchaudary.github.io" />
+    <meta property="og:image" content="https://ezzahchaudary.github.io/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ezzah Chaudary · Software Engineer Portfolio" />
+    <meta name="twitter:description" content="Full-Stack Developer and QA Engineer working across web applications, backend systems, databases, and software quality." />
+
+    <!-- ========== FAVICON ========== -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+
+    <!-- ========== FONT LOADING (Performance) ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+
+    <!-- Theme script -->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ========== SKIP TO CONTENT ========== -->
+    <a class="skip-link" href="#about">Skip to main content</a>
+
+    <!-- ========== SCROLL PROGRESS ========== -->
+    <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+    <!-- ========== HEADER ========== -->
+    <header>
+        <div class="container nav">
+            <div class="nav-top">
+                <div class="logo"><span class="logo-mark">EC</span>Ezzah Chaudary<span class="dot">.</span></div>
+                <div class="nav-right">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme">
+                        <i class="fas fa-sun icon-sun"></i>
+                        <i class="fas fa-moon icon-moon"></i>
+                    </button>
+                    <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-expanded="false" tabindex="0">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav-links" id="navLinks" role="navigation">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#qa">QA</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="avatar bracket-frame">
+                <span class="bk-tr"></span><span class="bk-bl"></span>
+                <img src="profile.jpeg" alt="Ezzah Chaudary - Profile Photo" />
+            </div>
+            <h1>Ezzah <span>Chaudary</span><span class="dot">.</span></h1>
+            <div class="role-line">
+                <span id="roleTyped">Full-Stack Developer &amp; QA Engineer</span><span class="cursor-blink">|</span>
+            </div>
+            <p class="subhead">
+                Next.js · TypeScript · React · Node.js · Cloudflare Workers<br />
+                BS Software Engineering · CGPA 3.57 · Scholarship Holder
+            </p>
+            <div class="btn-group">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+                <a href="CV.pdf" download class="btn btn-cv">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+            <div class="chain-strip" aria-hidden="true">
+                <div class="chain-pulse"></div>
+                <div class="chain-node">Next.js</div>
+                <div class="chain-node">TypeScript</div>
+                <div class="chain-node">React</div>
+                <div class="chain-node">Cloudflare</div>
+                <div class="chain-node">Drizzle ORM</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        <strong>Full-Stack Developer &amp; QA Engineer:</strong> Software Engineer (BS Software Engineering, CGPA 3.57) who designs, builds, tests, and maintains web applications and backend systems. At Funtash Technologies, I work on a live multi-company HRM platform built with Next.js, TypeScript, Cloudflare Workers, and D1, including biometric attendance, leave management, payroll, and reporting. My experience also includes React.js, Node.js, PHP, database design, API development, security, deployment, and end-to-end quality assurance.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/EzzahChaudary" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ezzah-chaudary-488122381/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://mail.google.com/mail/?view=cm&amp;to=chaudharyezzah8@gmail.com" target="_blank" rel="noopener" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card"><div class="number" data-count="3.57" data-decimals="2">0</div><div class="label">CGPA</div></div>
+                    <div class="stat-card"><div class="number" data-count="7" data-suffix="+">0</div><div class="label">Projects</div></div>
+                    <div class="stat-card"><div class="number" data-count="2026">0</div><div class="label">Graduation</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section id="skills" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Skills</h2>
+            </div>
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1"><i class="fab fa-js"></i> TypeScript</div>
+                    <div class="skill-item" style="--i:2"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="skill-item" style="--i:3"><i class="fas fa-database"></i> SQL</div>
+                    <div class="skill-item" style="--i:4"><i class="fab fa-html5"></i> HTML</div>
+                    <div class="skill-item" style="--i:5"><i class="fab fa-css3-alt"></i> CSS</div>
+                    <div class="skill-item" style="--i:6"><i class="fab fa-php"></i> PHP</div>
+                    <div class="skill-item" style="--i:7"><i class="fab fa-java"></i> Java</div>
+                    <div class="skill-item" style="--i:8"><i class="fab fa-python"></i> Python (Basics)</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks, Platforms &amp; Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1"><i class="fas fa-code"></i> Next.js</div>
+                    <div class="skill-item" style="--i:2"><i class="fab fa-react"></i> React.js</div>
+                    <div class="skill-item" style="--i:3"><i class="fab fa-node"></i> Node.js</div>
+                    <div class="skill-item" style="--i:4"><i class="fas fa-wind"></i> Tailwind CSS</div>
+                    <div class="skill-item" style="--i:5"><i class="fas fa-cloud"></i> Cloudflare Workers</div>
+                    <div class="skill-item" style="--i:6"><i class="fas fa-database"></i> Drizzle ORM</div>
+                    <div class="skill-item" style="--i:7"><i class="fas fa-plug"></i> REST APIs</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Quality Assurance &amp; Engineering</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1"><i class="fas fa-clipboard-check"></i> Manual Testing</div>
+                    <div class="skill-item" style="--i:2"><i class="fas fa-vial"></i> Unit Testing</div>
+                    <div class="skill-item" style="--i:3"><i class="fas fa-bug"></i> Debugging</div>
+                    <div class="skill-item" style="--i:4"><i class="fas fa-search"></i> Root-Cause Analysis</div>
+                    <div class="skill-item" style="--i:5"><i class="fas fa-database"></i> Database Validation</div>
+                    <div class="skill-item" style="--i:6"><i class="fas fa-shield-alt"></i> Security &amp; Access Control</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Integrations</h3>
+                <div class="skills-grid">
+                    <div class="skill-item" style="--i:1"><i class="fas fa-envelope"></i> SMTP</div>
+                    <div class="skill-item" style="--i:2"><i class="fas fa-paper-plane"></i> Brevo</div>
+                    <div class="skill-item" style="--i:3"><i class="fab fa-stripe"></i> Stripe</div>
+                    <div class="skill-item" style="--i:4"><i class="fab fa-whatsapp"></i> WhatsApp Cloud API</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section id="projects" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-project-id="rwa">
+                    <div class="project-img">
+                        <img src="logo.jpeg" alt="RWA rental property tokenization project" loading="lazy" />
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Final Year Project — RWA Rental Property Tokenization</h3>
+                        <p>Blockchain-based platform enabling fractional ownership of rental properties on Ethereum. Built Solidity smart contracts for automated rental income distribution, a secure ownership ledger, KYC-based compliance, and a React/Node.js web frontend. Wrote and ran unit tests to identify and fix a calculation bug in the 70% minimum-ownership rule.</p>
+                        <div class="tech-tags"><span>Ethereum</span><span>Solidity</span><span>React.js</span><span>Node.js</span><span>Unit Testing</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="mulligans">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content"><i class="fas fa-building"></i><span>Mulligans Corporate Website</span></div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Mulligans Corporate Website</h3>
+                        <p>Built a corporate website using React.js, TypeScript, and Vite, with Tailwind CSS styling and Framer Motion animations.</p>
+                        <div class="tech-tags"><span>React.js</span><span>TypeScript</span><span>Vite</span><span>Tailwind CSS</span><span>Framer Motion</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="watch">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content"><i class="fas fa-clock"></i><span>WatchIt Website</span></div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>WatchIt Website</h3>
+                        <p>Full-stack web application for buying and selling watches, developed with a PHP backend, MySQL database, and an HTML, CSS, and JavaScript frontend.</p>
+                        <div class="tech-tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span><span>HTML/CSS</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="coffee">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content"><i class="fas fa-mug-hot"></i><span>My Coffee Shop Website</span></div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>My Coffee Shop Website</h3>
+                        <p>JSP-based web application featuring a database-integrated product catalogue, ordering workflow, and user login, styled for a cafe brand experience.</p>
+                        <div class="tech-tags"><span>JSP</span><span>SQL</span><span>Web Application</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="banking">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content"><i class="fas fa-university"></i><span>Online Banking System</span></div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Online Banking System</h3>
+                        <p>OOP-based command-line application simulating accounts, transactions, and users with modular class design and in-memory data handling.</p>
+                        <div class="tech-tags"><span>C++</span><span>Java</span><span>OOP</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="hotel">
+                    <div class="project-img generic-thumb">
+                        <div class="generic-content"><i class="fas fa-hotel"></i><span>Hotel Management System</span></div>
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Hotel Management System</h3>
+                        <p>Data-structures-based command-line application implementing room allocation, billing, and customer check-in/check-out workflows.</p>
+                        <div class="tech-tags"><span>Data Structures</span><span>CLI Application</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-project-id="food">
+                    <div class="project-img">
+                        <img src="Welcome.png" alt="Food delivery app interface designed in Figma" loading="lazy" />
+                        <div class="view-overlay"><span>View Project</span></div>
+                    </div>
+                    <div class="project-body">
+                        <h3>Food Delivery App Interface</h3>
+                        <p>Designed a user experience in Figma covering restaurant browsing, cart management, and an intuitive food-ordering flow.</p>
+                        <div class="tech-tags"><span>Figma</span><span>UI/UX Design</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section id="experience" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Work Experience</h2>
+            </div>
+            <div class="work-timeline">
+                <div class="work-item">
+                    <div class="work-item-head">
+                        <div>
+                            <h3 class="work-role">Full-Stack Developer &amp; QA Engineer</h3>
+                            <div class="work-company">Funtash Technologies</div>
+                        </div>
+                        <span class="work-badge">Full-Time · Next.js, TypeScript, Cloudflare</span>
+                    </div>
+                    <ul class="work-bullets">
+                        <li>Designed, built, tested, and maintain a live multi-company HRM platform using Next.js 16, React 19, TypeScript, Cloudflare Workers, D1 (SQLite), and Drizzle ORM.</li>
+                        <li>Implemented 70+ REST API routes, 47 UI components, and a database with 50+ tables and 33 versioned SQL migrations; enforced company data isolation in API operations and database triggers.</li>
+                        <li>Built security controls including PBKDF2 password hashing, session expiry, CSRF protection, login lockout, password reset, role-based access, and admin activity logging.</li>
+                        <li>Developed biometric attendance integration with a Node.js Windows connector for ZKTeco devices, plus attendance classification, corrections, and Excel/PDF exports.</li>
+                        <li>Built leave management and policy-driven payroll workflows, including monthly snapshots, payslips, salary reports, employee loans, and audit trails.</li>
+                        <li>Delivered employee/admin modules, self-service portal, email and WhatsApp notifications, scheduled attendance reports, and a feature-flagged LiveKit/WebRTC meetings module.</li>
+                        <li>Wrote automated migration tests using Node's test runner and in-memory SQLite; validated company isolation, migration idempotency, and payroll-history integrity.</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item-head">
+                        <div>
+                            <h3 class="work-role">Full-Stack Developer</h3>
+                            <div class="work-company"><a href="https://zentix.gg" target="_blank" rel="noopener" class="work-company-link">Zentix <i class="fas fa-arrow-up-right-from-square"></i></a></div>
+                        </div>
+                        <span class="work-badge">Full-Time · Node.js/Express, React/Vite</span>
+                    </div>
+                    <ul class="work-bullets">
+                        <li>Built a Discord bot and React/Vite dashboard monitoring YouTube, Twitter/X, Twitch, Kick, Instagram, Reddit, and TikTok, with automated updates to Discord servers.</li>
+                        <li>Investigated and fixed production issues involving Reddit rate limits (429 errors), missing Reddit feeds in notification logs, and a hardcoded user ID in the Twitch feed route.</li>
+                        <li>Traced setup issues including 401 authentication errors, a broken font path, and a missing /user/servers API route.</li>
+                    </ul>
+                </div>
+
+                <div class="work-item">
+                    <div class="work-item-head">
+                        <div>
+                            <h3 class="work-role">Full-Stack Developer</h3>
+                            <div class="work-company">Love Connection</div>
+                        </div>
+                        <span class="work-badge">Full-Time · PHP, Admin Panel</span>
+                    </div>
+                    <ul class="work-bullets">
+                        <li>Worked across the admin-panel frontend and PHP backend API, integrating interface features with backend services.</li>
+                        <li>Added an Interested Users feature and user-segmentation tabs for All Users and Paid Users.</li>
+                        <li>Implemented transactional email sending through SMTP and Brevo for automated user messaging.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== QUALITY ASSURANCE ========== -->
+    <section id="qa" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Quality Assurance</h2>
+            </div>
+            <div class="experience-text qa-approach">
+                <h3 class="exp-title">Testing &amp; Validation</h3>
+                <div class="exp-block">
+                    <p>My QA work combines end-to-end issue investigation, automated tests, database inspection, and verification of data integrity.</p>
+                    <ul class="exp-features">
+                        <li><i class="fas fa-check-circle"></i> Write and run unit tests to identify logic and calculation defects</li>
+                        <li><i class="fas fa-check-circle"></i> Test database migrations for idempotency and data integrity</li>
+                        <li><i class="fas fa-check-circle"></i> Validate multi-company data isolation and payroll-history integrity</li>
+                        <li><i class="fas fa-check-circle"></i> Investigate production API, authentication, and notification issues</li>
+                        <li><i class="fas fa-check-circle"></i> Inspect database records with Drizzle Studio to verify fixes and data accuracy</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-head" style="margin-top: 3rem;">
+                <h3 class="qa-subtitle">QA Case Studies</h3>
+            </div>
+            <div class="work-timeline">
+                <div class="work-item">
+                    <div class="work-item-head">
+                        <div>
+                            <h3 class="work-role">HRM Platform — Migration &amp; Data Integrity Tests</h3>
+                            <div class="work-company">Funtash Technologies</div>
+                        </div>
+                        <span class="work-badge">Automated Testing</span>
+                    </div>
+                    <ul class="work-bullets">
+                        <li>Authored automated migration tests using Node's test runner and in-memory SQLite.</li>
+                        <li>Checked migration idempotency, company data isolation, and preservation of existing payroll history.</li>
+                        <li>Used Drizzle Studio to inspect database records and validate data accuracy while fixing issues end-to-end.</li>
+                    </ul>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-head">
+                        <div>
+                            <h3 class="work-role">Smart Contract — 70% Minimum-Ownership Rule</h3>
+                            <div class="work-company">Final Year Project · RWA Tokenization</div>
+                        </div>
+                        <span class="work-badge">Unit Testing</span>
+                    </div>
+                    <ul class="work-bullets">
+                        <li>Found a calculation bug in the smart contract's minimum-ownership rule by writing and running unit tests.</li>
+                        <li>Fixed the calculation and verified the expected behavior of the ownership threshold.</li>
+                    </ul>
+                </div>
+                <div class="work-item">
+                    <div class="work-item-head">
+                        <div>
+                            <h3 class="work-role">Production Issue Investigation</h3>
+                            <div class="work-company">Zentix · Discord Bot &amp; Dashboard</div>
+                        </div>
+                        <span class="work-badge">Debugging · API</span>
+                    </div>
+                    <ul class="work-bullets">
+                        <li>Investigated Reddit notification failures associated with rate limiting (429 responses).</li>
+                        <li>Fixed missing Reddit feed data in the Notification Logs page by addressing the feed retrieval and display flow.</li>
+                        <li>Diagnosed a hardcoded user ID in the Twitch feed route, 401 authentication errors, a broken font path, and a missing API route.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EDUCATION ========== -->
+    <section id="education" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="edu-timeline">
+                <div class="edu-item">
+                    <div>
+                        <div class="institution">BS Software Engineering (Scholarship Holder)</div>
+                        <div class="detail">Foundation University School of Science and Technology (FUSST) · Rawalpindi</div>
+                    </div>
+                    <div class="year">2022 – 2026 · CGPA 3.57</div>
+                </div>
+                <div class="edu-item">
+                    <div>
+                        <div class="institution">FSc Pre-Engineering</div>
+                        <div class="detail">Fazaia Intermediate College (Nur Khan Base) · Rawalpindi</div>
+                    </div>
+                    <div class="year">2020 – 2022</div>
+                </div>
+                <div class="edu-item">
+                    <div>
+                        <div class="institution">Matriculation (Science)</div>
+                        <div class="detail">OPF Girls College · Rawalpindi</div>
+                    </div>
+                    <div class="year">2018 – 2020</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LANGUAGES & HOBBIES ========== -->
+    <section id="more" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Languages &amp; Interests</h2>
+            </div>
+            <div class="two-col">
+                <div class="lang-hobby-list">
+                    <h3><i class="fas fa-language" style="color:var(--mint); margin-right:0.5rem;"></i>Languages</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Urdu (Native)</li>
+                        <li><i class="fas fa-check-circle"></i>English (Professional Working Proficiency)</li>
+                    </ul>
+                </div>
+                <div class="lang-hobby-list">
+                    <h3><i class="fas fa-heart" style="color:var(--mint); margin-right:0.5rem;"></i>Hobbies</h3>
+                    <ul>
+                        <li><i class="fas fa-book"></i>Reading</li>
+                        <li><i class="fas fa-pen"></i>Writing</li>
+                        <li><i class="fas fa-utensils"></i>Cooking</li>
+                        <li><i class="fas fa-tshirt"></i>Knitting</li>
+                        <li><i class="fas fa-undo-alt"></i>Crocheting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section id="contact" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <p style="max-width: 600px; margin: 0 auto 2.5rem; color: var(--text-muted);">
+                Have a question, a project idea, or just want to say hello? I'd love to hear from you!
+            </p>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xdaqenyy" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required placeholder="xyz@example.com" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="_subject">Subject</label>
+                    <input type="text" id="_subject" name="_subject" required placeholder="Project Inquiry" />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Leave a Message..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    <span id="submitText">Send Message</span>
+                    <span class="btn-spinner" id="submitSpinner" style="display:none;"></span>
+                </button>
+                <div id="formFeedback" style="margin-top: 1rem; display: none; text-align: center; font-weight: 500;"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== REFERENCES ========== -->
+    <section id="references" class="reveal-section">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">References</h2>
+            </div>
+            <p style="text-align:center; color:var(--text-muted);">Available on request.</p>
+        </div>
+    </section>
+
+    <!-- ========== MODAL ========== -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModalBtn">&times;</span>
+            <h3 id="modalTitle">Project Title</h3>
+            <div class="modal-gallery" id="modalGallery"></div>
+        </div>
+    </div>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://github.com/EzzahChaudary" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ezzah-chaudary-488122381/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&to=chaudharyezzah8@gmail.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://profile.indeed.com/?hl=en_PK&co=PK&from=gnav-homepage" target="_blank" aria-label="Indeed"><i class="fas fa-id-card"></i></a>
+            </div>
+            <p>
+                <i class="fas fa-phone"></i> +92 311 5751131 &nbsp;·&nbsp;
+                <i class="fas fa-map-pin"></i> Rawalpindi, Pakistan
+                <button class="copy-email-btn" id="copyEmailBtn" title="Copy email" aria-label="Copy email address"><i class="fas fa-copy"></i></button>
+            </p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem; opacity: 0.7;">
+                &copy; <span id="copyrightYear">2026</span> Ezzah Chaudary · All rights reserved
+            </p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
